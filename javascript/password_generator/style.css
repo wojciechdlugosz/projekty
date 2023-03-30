@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2F62F2;
+    font-family: Geneva, Tahoma, sans-serif;
+    color: #FFF;
+}
+
+h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.generator-container {
+    padding: 20px;
+    width: 350px;
+    background-color: #9EC4FB;
+    color: black;
+    box-shadow: 0px 10px 12px 3px rgba(0, 0, 0, 0.25);
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.result-container #result {
+    width: 85%;
+    height: 42px;
+    padding: 10px;
+    background-color: #6E87A8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#clipboard {
+    width: 42px;
+    height: 42px;
+    background-color: #FFC107;
+    border: none;
+    color: black;
+    font-size: 18px;
+}
+
+.password-length {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.password-length input {
+    width: 130px;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    margin-bottom: 10px;
+}
+
+#generate-password {
+    display: block;
+    padding: 8px 12px;
+    border: none;
+    width: 100%;
+    background-color: #3B3B78;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}

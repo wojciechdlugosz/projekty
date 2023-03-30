@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="portfolio basic.css"> -->
+    <title>Basic portfolio</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: "Poppins",Arial, Helvetica, sans-serif;
+        }
+
+        #navbar {
+            margin: 0;
+            padding: 5px 0;
+            width: 100%;
+            height: 50px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 10px 10px -5px rgba(0,0,0,0.1);
+        }
+
+        #navbar ul {
+            display: flex;
+            margin: 10px 0 10px auto;
+            width: 55%; 
+            justify-content: space-evenly;
+            list-style: none;
+        }
+
+        #navbar ul li a {
+            margin-left: 3px;
+            color: black;
+            opacity: 0.7;
+            font-size: 1.2rem;
+            font-family: "Poppins" ,Arial, Helvetica, sans-serif;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: lightgreen;
+            opacity: 1;
+            text-decoration: underline;
+            transition: all 0.15s; 
+        }
+
+        #intro-section {
+            height: 300px;
+            background-image: url("https://cdn.pixabay.com/photo/2017/02/05/00/19/web-design-2038872__340.jpg");
+            background-size: cover;
+        }
+
+        #welcome-section {
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .message {
+            display: flex;
+            margin: 20px;
+            width: 500px;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-family: "Poppins" ,Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .message img {
+            max-width: 100%;
+        }
+
+        section {
+            margin-top: 1rem;
+            padding-top: 2rem;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        div.my-information {
+            display: block;
+            font-size: 1.5rem;
+            text-align: left;
+        }
+
+        #skills-section {
+            background-color: black;
+            color: white;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .skill-information {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .skill-name {
+            margin: 0;
+            padding: 0;
+            font-size: 1.5rem;
+        }
+
+        .skill-information progress {
+            background-color: white;
+            border: 1px solid white;
+        }
+
+        .skill-information progress::-webkit-progress-value {
+            background-color: white;
+            border-radius: 0;
+        }
+
+        .skill-information progress::-webkit-progress-bar {
+            background-color: black;
+        }
+
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .projects-container .image-box {
+            margin: 5px;
+        }
+
+        .image-box a {
+            text-decoration: none;
+            text-align: center;
+        }
+
+
+        #contact-section {
+            margin-top: 50px;
+            padding: 50px;
+            background-color: black;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        #contact-section a {
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+ 
+
+    </style>
+
+
+</head>
+<body>
+    <main>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#intro-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="intro-section"> 
+        </section>
+
+        <section id="welcome-section">
+            <div class="message">
+                <p>Hello! <br> I am Frontend Developer</p>
+            </div>
+            <div class="message">
+                <img src="https://cdn.pixabay.com/photo/2016/10/13/16/26/web-agency-1738168_1280.jpg" alt="">
+            </div>
+        </section>
+
+        <section id="about-section">
+            <h1 class="section-heading">About me</h1>
+            <div class="about-container">
+                <div class="message my-image">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/16/11/12/computer-1828603__340.jpg" alt="">
+                </div>
+                <div class="message my-information">
+                    <p>I am Andy.</p>
+                    <p>I am programmer and tech enthusiast.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus architecto beatae cum sapiente voluptates libero ab harum perferendis similique. Voluptatem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills-section">
+            <h1 class="section-heading">My skills</h1>
+            <div class="skills-container"> 
+                <div class="skill-information">
+                    <p> <i class="fab fa-html5 fa-3x"></i> </p>
+                    <p class="skill-name"> HTML5 </p>
+                    <p> <progress value="95" max="100" /> </p>
+                </div>
+                <div class="skill-information">
+                    <p> <i class="fab fa-css3 fa-3x"></i> </p>
+                    <p class="skill-name"> CSS3 </p>
+                    <p> <progress value="95" max="100" /> </p>
+                </div>
+                <div class="skill-information">
+                    <p> <i class="fab fa-js fa-3x"></i> </p>
+                    <p class="skill-name"> JavaScript </p>
+                    <p> <progress value="85" max="100" /> </p>
+                </div>
+                <div class="skill-information">
+                    <p> <i class="fab fa-react fa-3x"></i> </p>
+                    <p class="skill-name"> React </p>
+                    <p> <progress value="70" max="100" /> </p>
+                </div>
+                <div class="skill-information">
+                    <p> <i class="fab fa-angular fa-3x"></i> </p>
+                    <p class="skill-name"> Angular </p>
+                    <p> <progress value="65" max="100" /> </p>
+                </div>
+                <div class="skill-information">
+                    <p> <i class="fab fa-bootstrap fa-3x"></i> </p>
+                    <p class="skill-name"> Bootstrap </p>
+                    <p> <progress value="65" max="100" /> </p>
+                </div>
+                <div class="skill-information">
+                    <p> <i class="fab fa-php fa-3x"></i> </p>
+                    <p class="skill-name"> PHP </p>
+                    <p> <progress value="45" max="100" /> </p>
+                </div>
+                <div class="skill-information">
+                    <p> <i class="fab fa-python fa-3x"></i> </p>
+                    <p class="skill-name"> Python </p>
+                    <p> <progress value="65" max="100" /> </p>
+                </div>
+            </div> 
+        </section>
+
+        <section class="projects-section">
+            <h1 class="section-heading">My projects</h1>
+            <div class="projects-container">
+                <div class="image-box">
+                    <a href="#">
+                        <img src="https://cdn.pixabay.com/photo/2016/08/20/06/44/e-commerce-1606962__340.png" alt="">
+                        <div>Test</div>
+                    </a>
+                </div>
+                <div class="image-box">
+                    <a href="#">
+                        <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373__340.jpg" alt="">
+                        <div>Company website</div>
+                    </a>
+                </div>
+                <div class="image-box">
+                    <a href="#">
+                        <img src="https://cdn.pixabay.com/photo/2015/01/20/14/27/office-605503__340.jpg" alt="">
+                        <div>Test</div>
+                    </a>
+                </div>
+                <div class="image-box">
+                    <a href="#">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/13/04/52/statistic-1820320__340.png" alt="">
+                        <div>Test</div>
+                    </a>
+                </div>
+                <div class="image-box">
+                    <a href="#">
+                        <img src="https://cdn.pixabay.com/photo/2016/08/17/04/43/template-1599667__340.png" alt="">
+                        <div>Test</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section">
+            <h1 class="section-heading">Let's work together</h1>
+            <p>Find me on:</p>
+            <p>
+                <a href="#"> <i class="fab fa-github"> Github</i> </a>
+                <a href="#"> <i class="fab fa-linkedin-in"> Linkedin</i> </a>
+                <a href="#"> <i class="fas fa-envelope-square"> Email</i> </a>
+            </p>
+        </section>
+
+    </main>
+</body>
+</html>

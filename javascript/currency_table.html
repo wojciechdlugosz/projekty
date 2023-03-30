@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela kursów walut NBP</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            background: #363d57;
+        }
+        .container {
+            width: 400px;
+            background: #ffffff;
+            border-radius: 10px;
+        }
+        .container h3 {
+            text-align: center;
+        }
+        .rate {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            margin: 10px;
+            border-bottom: 1px dotted #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Tabela NBP nr: <span id="date"></span></h3>
+        <div id="data-table"></div>
+    </div>
+        
+    <script>
+
+        async function startApp() {
+
+            const apiURL = "http://api.nbp.pl/api/exchangerates/tables/a/?format=json";
+            const response = await fetch(apiURL);
+            const data = await response.json();
+
+            processData(data[0]);
+
+        }
+
+        function processData(data) {
+
+            const code = data.effectiveDate;
+            const table = data.table; // np. A
+            const tableNum = data.no;
+            const ratesArr = data.rates;
+
+            const dataTableDiv = document.getElementById("data-table");
+
+            document.getElementById("date").innerHTML = tableNum;
+
+            ratesArr.forEach(function (el) {
+                const code = el.code; // np. USD
+                const currency = el.currency; // np. dolar amerykański
+                const price = el.mid; // np. 3.98
+                addRateContent(code, currency, price, dataTableDiv);
+            });
+        }
+
+        function addRateContent (code, currency, price, dataTableDiv) {
+
+            const el = document.createElement("div");
+
+            el.classList.add("rate");
+            
+            el.innerHTML = `
+                <div>${code}</div>
+                <div>${currency}</div>
+                <div>${price} zł</div>
+            `;
+
+            dataTableDiv.append(el)
+
+        }
+
+        startApp();
+
+    </script>
+</body>
+</html>
