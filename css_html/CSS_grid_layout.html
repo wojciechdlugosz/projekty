@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <title>CSS Grid Layout</title>
+ <style>
+  body {
+   display: grid;
+   grid-template-columns: 1fr 300px;
+   grid-template-rows: 300px 50px 1fr 50px;
+   grid-template-areas: "baner baner" "menu menu" "blog column " "stopka stopka";
+   max-width: 1200px;
+   min-height: 100vh;
+   font-size: 40px;
+   color: white;
+   font-family: sans-serif;
+   margin: 0 auto;
+  }
+
+  header {
+   grid-area: baner;
+   background-color: olivedrab
+  }
+
+  nav {
+   grid-area: menu;
+   background-color: black;
+  }
+
+  main {
+   grid-area: blog;
+   background-color: #a55;
+  }
+
+  aside {
+   grid-area: column;
+   background-color: #6a1;
+  }
+
+  footer {
+   grid-area: stopka;
+   background-color: #c77;
+  }
+
+  @media (max-width: 1024px) {
+   body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 300px 1fr 200px 50px;
+    grid-template-areas: "menu" "baner" "blog" "column" "stopka";
+
+   }
+  }
+ </style>
+</head>
+
+<body>
+
+ <header>Header</header>
+ <nav>Nav</nav>
+ <main>Main</main>
+ <aside>Aside</aside>
+ <footer>Stopka</footer>
+
+
+</body>
+
+</html>
