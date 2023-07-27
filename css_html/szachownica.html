@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            width: 60vw;
+            height: 60vw;
+            background-color: white;
+            position: absolute;
+
+            /* 1 sposób wyśrodkowania szachownicy
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); */
+
+            /* 2 sposób wyśrodkowania szachownicy
+            bottom: calc(50% - 30vw);
+            right: calc(50% - 30vw); */
+
+            /* 3 sposób wyśrodkowania szachownicy */
+            top: 50%;
+            left: 50%;
+            margin-top: -30vw;
+            margin-left: -30vw;
+        }
+
+        div:nth-child(even) {
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    
+</body>
+</html>
